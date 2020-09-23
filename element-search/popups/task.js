@@ -5,13 +5,12 @@ const close_modal = Array.from(document.getElementsByClassName("modal__close"));
 const success = Array.from(modalMain.getElementsByClassName("show-success"));
 
 function close(){
-    modalSuccess.className = "modal";
-    modalMain.className = "modal";
+    this.closest(".modal_active").classList.remove("modal_active");
 }
 
 function show_sucess(){
-    modalSuccess.className += " modal_active";
-    modalMain.className = "modal";
+    modalSuccess.classList.add("modal_active");
+    modalMain.classList.remove("modal_active");
 }
 
 close_modal.forEach(element => element.onclick = close);
