@@ -40,7 +40,7 @@ function sendMessage(event) {
         messages.closest(".chat-widget__messages-container").scrollTop = messages.scrollHeight;
         setTimeout(sendRandomAnswer, 500);
         
-        timerId = setTimeout(sendRandomAnswer, 10000);
+        timerId = setTimeout(sendRandomAnswer, 30000);
 
     }
 }
