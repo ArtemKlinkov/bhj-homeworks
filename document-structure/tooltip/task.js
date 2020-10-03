@@ -6,8 +6,13 @@ function hasTooltipClick(event) {
 
     const tooltipDiv = document.querySelector(".tooltip");
     if (tooltipDiv) {
-        tooltipDiv.remove();
-        return;
+        
+        if (tooltipDiv === event.target.nextElementSibling) {
+            tooltipDiv.remove();
+            return;
+        } else {
+            tooltipDiv.remove();
+        }
     }
 
     const titleTooltip = this.title;

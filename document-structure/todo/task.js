@@ -5,9 +5,11 @@ const buttonAdd = document.getElementById("tasks__add");
 buttonAdd.addEventListener("click", addTask);
 
 function addTask(event) {
-
-    if ((event.code === "Enter" || event.type === "click") && taskInput.value !== "") {
+    if (event.type === "click") {
         event.preventDefault();
+    }    
+    if ((event.code === "Enter" || event.type === "click") && taskInput.value !== "") {
+        
         const taskDiv = document.createElement("div");
         taskDiv.classList.add("task");
         taskDiv.innerHTML = `<div class="task__title">
@@ -18,6 +20,7 @@ function addTask(event) {
         taskInput.value = "";
         taskDiv.querySelector(".task__remove").addEventListener("click", removeTask);
     }
+
 }
 
 function removeTask(event) {
