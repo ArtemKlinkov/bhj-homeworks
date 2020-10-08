@@ -12,6 +12,8 @@ signInBtn.addEventListener("click", (event) => {
                 welcome.classList.toggle("welcome_active");
                 signinForm.classList.toggle("signin_active");
                 userId.innerText = localStorage.user_id;
+            } else {
+                alert("Неверное имя пользвателя или пароль");
             }
         };
     }
